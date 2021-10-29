@@ -1,0 +1,108 @@
+.nav-sidebar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    @include breakpoint(maxsm) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: $theme-white-color;
+        width: 250px;
+        z-index: 1050;
+        height: 100%;
+        padding: 20px;
+        border-left: 1px solid $theme-grey-color;
+        transition: all  0.2s ease-in-out;
+        visibility: hidden;
+    }
+    ul{
+        list-style: none;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    .close-button{
+        display: none;
+        @include breakpoint(maxsm) {
+            display: block !important;
+        }
+    }
+    
+}
+.siderbar-toggler{
+    display: none;
+    @include breakpoint(maxsm) {
+        display: block !important;
+        position: fixed;
+        top: 280px;
+        right: 0;
+        z-index: 999;
+    }
+}
+.comment-form{
+    .form-control{
+        min-height: 50px;
+        border:1px solid $theme-grey-color;
+        color: $body-font-color;
+        @include placeholder {
+            color: $theme-grey-color !important;
+        }
+    }
+    textarea:focus,
+    input:focus{
+        border-color: rgba(51, 181, 229, 0.5);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(51, 181, 229, 0.3);
+        outline: 0 none;
+    }
+}
+.pinned-article{
+    padding: 7px;
+    border: 1px solid $theme-grey-color;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.author-meta{
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.sidebar{
+    position: relative;
+    margin: 20px 0px;
+    .sidebar-title{
+        margin-bottom: 10px;
+        h3{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    .sidebar-content{
+        margin-bottom: 20px;
+        .recent-articles{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid $theme-light-grey;
+                .recent-article-title{
+                    h5{
+                        font-size: 18px;
+                    }
+                }
+                .recent-article-category{
+                    color: $theme-secondary-color;
+                }
+                .recent-article-date{
+                    color: $theme-grey-color;
+                }
+            }
+        }
+    }
+}

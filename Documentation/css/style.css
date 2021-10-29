@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+
+body {
+  background: #ffffff;
+  position: relative;
+  line-height: 1.7;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+a{
+  color: #40b1dd;
+}
+h3 span {
+  color: #40b1dd;
+}
+.btn {
+  line-height: 1.5rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  padding: 15px 25px 13px 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0px;
+  border-radius: 40px;
+  
+}
+.btn-primary{
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: #1d2c63;
+  color: #ffffff;
+  border-color: #1d2c63;
+}
+.jumbotron {
+  border-radius: 0px;
+  background: #e5e7ec;
+  margin-bottom: 20px;
+}
+
+.jumbotron button {
+  margin-top: 10px;
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+section pre{
+  border: none;
+  padding: 0px;
+}
+.highlighted{
+  background: #e5e7ec;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.highlighted ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#web-development,
+#mobile-development {
+  padding-bottom: 0;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.nav {
+  background: #2a408e;
+}
+
+.nav a {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.nav li a:hover,
+.nav li a:focus {
+  background: #1d2c63;
+}
+
+.nav .active {
+  font-weight: bold;
+  background: #1d2c63;
+}
+
+.nav .nav {
+  display: none;
+}
+
+.nav .active .nav {
+  display: block;
+}
+
+.nav .nav a {
+  font-weight: normal;
+  font-size: .85em;
+}
+
+.nav .nav span {
+  margin: 0 5px 0 2px;
+}
+
+.nav .nav .active a,
+.nav .nav .active:hover a,
+.nav .nav .active:focus a {
+  font-weight: 700;
+  padding-left: 30px;
+  border-left: 5px solid #40b1dd;
+}
+
+.nav .nav .active span,
+.nav .nav .active:hover span,
+.nav .nav .active:focus span {
+  display: none;
+}
+
+.application {
+  border-top: 1px solid #eee;
+}
+
+.affix-top {
+  position: relative;
+}
+
+.affix {
+  top: 20px;
+}
+
+.affix,
+.affix-bottom {
+  width: 213px;
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+footer {
+  border-top: 1px solid #eeeeee;
+  height: 50px;
+}
+
+footer p {
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+@media (min-width:1200px) {
+
+  .affix,
+  .affix-bottom {
+    width: 263px;
+  }
+}

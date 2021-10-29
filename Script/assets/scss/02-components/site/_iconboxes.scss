@@ -1,0 +1,82 @@
+//Icon Box 1
+
+.iconic-box-1 {
+  .box-iconic {
+    text-align: center !important;
+    float: left;
+    font-size: 40px;
+    &.box-rounded{
+      @include border-radius(50px);
+    }
+    &.iconic-block{
+      height: 62px;
+      width: 62px;
+      i {
+        font-size: 30px;
+        line-height: 58px;
+      }
+    }
+    &.iconic-image{
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .box-content {
+    margin-left: 70px;
+    .read {
+      color: $theme-secondary-color;
+      text-decoration: none;
+      i {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+}
+//Icon Box 2
+
+.iconic-box-2 {
+  .box-iconic {
+    i {
+      font-size: 40px;
+
+    }
+    &.box-rounded{
+      @include border-radius(50px);
+      img{
+        @include border-radius(50px);
+      }
+    }
+    &.iconic-block{
+      height: 62px;
+      width: 62px;
+      display: inline-block;
+      text-align: center !important;
+      i {
+        font-size: 30px;
+        line-height: 58px;
+      }
+    }
+    &.iconic-image{
+      img{
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+  .read {
+    color: $theme-secondary-color;
+    text-decoration: none;
+    i {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+
+}
+
+

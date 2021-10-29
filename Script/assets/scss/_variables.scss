@@ -1,0 +1,110 @@
+//
+// Application Variables
+//-----------------------------------------------------
+
+// Primary font
+$body-font : 'Nunito',
+sans-serif;
+$body-font-size : 15px;
+$body-font-color : #50555f;
+$body-line-height : 1.75em;
+$body-font-weight : 400;
+
+// Theme Colors Solid
+$theme-primary-color : #1d2c63;
+$theme-secondary-color : #40b1dd;
+$theme-grey-color : #8a9ba8;
+$theme-light-grey : #e5e7ec;
+$theme-white-color : #ffffff;
+$theme-black-color : #000000;
+$theme-light-bg : #edf6fe;
+$yellow : rgb(233, 196, 84);
+$darkpink : #C02031;
+//Solid Colors List
+$colors-list : (("theme-primary", $theme-primary-color),
+("theme-secondary", $theme-secondary-color),
+("theme-grey", $theme-grey-color),
+("theme-white", $theme-white-color),
+("theme-black", $theme-black-color),
+("theme-light", $theme-light-bg),
+("yellow", $yellow),
+("darkpink", $darkpink));
+// Theme Colors Gradient
+$gradient1 : linear-gradient(120deg, #1d2c63 0%, #40b1dd 100%);
+$gradient2 : linear-gradient(to right, #1d2c63 0%, #40b1dd 100%);
+
+//Gradient Colors List
+$gradient-colors-list : (("gradient1", $gradient1),
+("gradient2", $gradient2),
+);
+
+// Social Media Colors
+$color-amazon : hsla(36, 100%, 50%, 1); // #ff9700
+$color-apple : hsla(0, 0%, 45%, 1); // #737373
+$color-basecamp : hsla(121, 38%, 58%, 1); // #6bbd6d
+$color-box : hsla(204, 83%, 40%, 1); // #1277bc
+$color-dribbble : hsla(338, 82%, 60%, 1); // #ed4584
+$color-dropbox : hsla(206, 89%, 46%, 1); // #0d84de
+$color-ebay : hsla(219, 89%, 30%, 1); // #083790
+$color-facebook : hsla(222, 47%, 40%, 1); // #365397
+$color-flickr : hsla(334, 100%, 46%, 1); // #ea0066
+$color-foursquare : hsla(206, 72%, 45%, 1); // #207dc5
+$color-github : hsla(0, 0%, 18%, 1); // #2f2f2f
+$color-google : hsla(217, 89%, 61%, 1); // #4285f4
+$color-google_plus : hsla(8, 74%, 53%, 1); // #e0452c
+$color-instagram : hsla(208, 46%, 41%, 1); // #396d9a
+$color-linkedin : hsla(203, 100%, 35%, 1); // #006db3
+$color-pinterest : hsla(0, 78%, 45%, 1); // #ce1a19
+$color-skype : hsla(198, 100%, 48%, 1); // #00acf4
+$color-tumblr : hsla(210, 37%, 30%, 1); // #304c68
+$color-twitter : hsla(198, 100%, 47%, 1); // #00a9f1
+$color-vimeo : hsla(200, 82%, 61%, 1); // #48b6ed
+$color-yelp : hsla(5, 100%, 38%, 1); // #c30f00
+$color-youtube : hsla(0, 100%, 60%, 1); // #ff3333
+
+//Social Media Colors List
+$social-media-variables : (("amazon", $color-amazon),
+("apple", $color-apple),
+("basecamp", $color-basecamp),
+("box", $color-box),
+("dribbble", $color-dribbble),
+("dropbox", $color-dropbox),
+("ebay", $color-ebay),
+("facebook", $color-facebook),
+("flickr", $color-flickr),
+("foursquare", $color-foursquare),
+("github", $color-github),
+("google", $color-google),
+("google_plus", $color-google_plus),
+("instagram", $color-instagram),
+("linkedin", $color-linkedin),
+("pinterest", $color-pinterest),
+("skype", $color-skype),
+("tumblr", $color-tumblr),
+("twitter", $color-twitter),
+("vimeo", $color-vimeo),
+("yelp", $color-yelp),
+("youtube", $color-youtube),
+);
+
+
+
+//headings
+$heading-font :'Nunito',
+sans-serif;
+$heading-font-arabic : 'Cairo',
+sans-serif;
+$heading-1-size : 52px;
+$heading-2-size : 40px;
+$heading-3-size : 34px;
+$heading-4-size : 26px;
+$heading-5-size : 20px;
+$heading-6-size : 18px;
+$heading-color :#42484d;
+$heading-light :#ffffff;
+$heading-grey :#788fa4;
+$heading-dark :#000000;
+$heading-line-height : 1.6em;
+$heading-normal :600;
+$heading-thick :700;
+$heading-thin :300;

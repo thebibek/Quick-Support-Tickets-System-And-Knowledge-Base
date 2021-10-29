@@ -1,0 +1,30 @@
+.card-signin {
+    border: 0;
+    @include border-radius(8px);
+    @include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+
+    .card-title {
+        margin-bottom: 35px;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $theme-grey-color;
+    }
+    .card-body {
+        padding: 30px;
+        .app-logo{
+            img{
+                width: 200px;
+                height: auto;
+            }
+            
+        }
+    }
+
+    .card-footer {
+        border-top: 1px solid $theme-light-grey;
+        background: $theme-white-color;
+        @include border-radius-separate(0px, 0px, 8px, 8px);
+    }
+}

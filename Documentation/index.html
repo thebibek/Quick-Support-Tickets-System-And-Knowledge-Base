@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation :: Quicksupport - Support Tickets System & Knowledge Base</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.min.css">
+
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='fonts/font-awesome/css/font-awesome.min.css'>
+
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h2>Quicksupport - Support Tickets System & Knowledge Base</h2>
+            
+        </div>
+    </div>
+    <!--end of .jumbotron-->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3 scrollspy">
+                <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
+                    <li><a href="#introduction">Introduction</a>
+                        <ul class="nav">
+                            <li><a href="#requirements"><span class="fa fa-angle-double-right"></span>System
+                                    Requirements</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#getting-started">Getting Started</a>
+                        <ul class="nav">
+                            <li><a href="#technology"><span class="fa fa-angle-double-right"></span>Technology</a></li>
+                            <li><a href="#features"><span class="fa fa-angle-double-right"></span>Application
+                                    Features</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#installation">Installation</a>
+                        <ul class="nav">
+                            <li><a href="#db-create"><span class="fa fa-angle-double-right"></span>Database Creation</a></li>
+                            <li><a href="#set-baseurl"><span class="fa fa-angle-double-right"></span>Setup Base URL</a></li>
+                            <li><a href="#db-configure"><span class="fa fa-angle-double-right"></span>Database Configuration</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#customization">Customization</a>
+                        <ul class="nav">
+                            <li><a href="#site-layout"><span class="fa fa-angle-double-right"></span>Site Layout</a></li>
+                            <li><a href="#admin-layout"><span class="fa fa-angle-double-right"></span>Admin Layout</a></li>
+                            <li><a href="#routes"><span class="fa fa-angle-double-right"></span>Routes File</a></li>
+                            <li><a href="#theming"><span class="fa fa-angle-double-right"></span>Theming</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#admin">Admin Panel </a>
+                        <ul class="nav">
+                            <li><a href="#dashboard"><span class="fa fa-angle-double-right"></span>Dashboard</a></li>
+                            <li><a href="#articles"><span class="fa fa-angle-double-right"></span>Articles</a></li>
+                            <li><a href="#tickets"><span class="fa fa-angle-double-right"></span>Tickets</a></li>
+                            <li><a href="#faqs"><span class="fa fa-angle-double-right"></span>FAQS</a></li>
+                            <li><a href="#users"><span class="fa fa-angle-double-right"></span>Users</a></li>
+                            <li><a href="#settings"><span class="fa fa-angle-double-right"></span>Settings</a></li>
+                            <li><a href="#profile"><span class="fa fa-angle-double-right"></span>Profile</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="#versions">Version History</a></li>
+                    <li><a href="#rateus">Rate Us!</a></li>
+                    <li><a href="#thankyou">Thank you!</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-9">
+                <section id="introduction">
+                    <h2>Introduction</h2>
+                    <div class="highlighted">
+                        <ul>
+                            <li><strong>Item Name : </strong>Quicksupport - Support Tickets System & Knowledge Base</li>
+                            <li><strong>Item Version : </strong> v 3.0</li>
+                            <li><strong>Support : </strong> <a
+                                    href="mailto:myquick@yahoo.com">myquick@yahoo.com</a></li>
+                        </ul>
+                    </div>
+                    <p>First of all, Thank you so much for purchasing this script and for being my loyal customer.
+                        <strong>You are awesome!</strong>
+                        <br> You are entitled to get free lifetime updates to this product + exceptional support from
+                        the author directly.
+                    </p>
+                    <p>This documentation is to help you regarding the usage and customization of script. Please go
+                        through the
+                        documentation carefully to understand how it works. If you have any questions that are beyond
+                        the scope of
+                        this documentation, please feel free to contact us on <a
+                            href="mailto:myquick@yahoo.com">myquick@yahoo.com</a> </p>
+                    <section id="requirements">
+                        <h3>System Requirements</h3>
+                        <p>To installing Quicksupport - Support Tickets System & Knowledge Base, Your web server must be
+                            running PHP
+                            5.6 or higher, and Mysql 5 or higher. Below are a list of items you should ensure your host
+                            can comply
+                            with.</p>
+                        <ol>
+                            <li>PHP 7</li>
+                            <li>PHP 5.6+</li>
+                            <li>MYSQLi 5.1+</li>
+                            <li>MYSQLi Extension</li>
+                            <li>CURL Extension (recommended)</li>
+                        </ol>
+                        <div class="alert alert-warning">
+                            <p>
+                                <i class="fa fa-info"></i> In most hosting accounts these extensions are enabled by
+                                default. But you
+                                should check with your hosting provider.
+                            </p>
+                        </div>
+                    </section>
+
+                </section>
+                <!--end of #introdiction-->
+
+                <section id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>Quicksupport, the online support ticket system, Exclusively made for Support Tickets and Knowledge Bases. Using this application user can register to portal and make support request for their tickets. This application also provide facility to search articles and FAQs that added by admin, Which will help your clients to know more about your product or services.</p>
+
+                    <section id="technology">
+                        <h3>Technology</h3>
+                        <ul>
+                            <li>Codeigniter Version 3.1.10</li>
+                            <li>Bootstrap Version 4.1.3</li>
+                            <li>HTML5/ CSS3</li>
+                            <li>Jquery/ AJAX</li>
+                        </ul>
+                    </section>
+                    <!--end of #technology-->
+                    <section id="features">
+                        <h3>Application Features</h3>
+                        <ul>
+                            <li>Fully AJAX Based System.</li>
+                            <li>User-friendly Interface and Interaction.</li>
+                            <li>Multilingual Support.</li>
+                            <li>Well Documented.</li>
+                            <li>Users can register account and submit tickets.</li>
+                            <li>Users can access knowledge base and FAQs.</li>
+                            <li>User Dashboard and User Profile.</li>
+                            <li>Guest Ticket Submission without login.</li>
+                            <li>Article Voting.</li>
+                            <li>Admin Can Manage Articles and Categories.</li>
+                            <li>Admin Can Manage FAQs and Categories.</li>
+                            <li>Admin Can Manage Tickets and Categories.</li>
+                            <li>Assign Tickets to Support Agents.</li>
+                            <li>Admin can Manage Users.</li>
+                            <li>Role Based Permission and User Based Permissions.</li>
+                            <li>Site Settings, SEO Settings, Social Media Settings and more.</li>
+                        </ul>
+                    </section>
+                    <!--end of #introdiction-->
+                </section>
+                <!--end of #getting-started-->
+                <section id="installation">
+                    <h2>Installation</h2>
+                    <p>Here are the steps you have to take care of installing Quicksupport.</p>
+                    <section id="db-create">
+                        <h3>Database Creation</h3>
+                        <p>You need to have previously set up database from the cPanel. </p>
+                        <p>Here is a good tutorial <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9363/2180/how-to-create-and-maintain-mysql-databases-in-cpanel" target="_blank">how to set up MySQL database in cPanel</a> if you are not familiar with this.</p>
+                        <ol>
+                            <li>Login to cPanel by accessing www.yourdomain.com/cpanel and navigate go MySQL Databases.</li>
+                            <li>Create database first.</li>
+                            <li>Create user and set up your password.</li>
+                            <li>Add the user to database by selecting the database and the username. </li>
+                            <li>Open the file <strong>Quicksupport.sql</strong> in database folder of package files and Import the Database. It will create all required database tables and sample data's.  </li>
+                        </ol>
+                        <p>Make sure you have checked All privileged when adding the user to database.</p>
+                    </section>
+                    <!--end of #db-create-->
+                    <section id="set-baseurl">
+                        <h3>Setup Base URL</h3>
+                        <p>After Uploading files form <strong>script</strong> folder to your domain. Go to<strong> application/config/config.php and setup $config['base_url']</strong> where Quicksupport will be installed.</p>
+                        <p>You need to add your base URL to this line.</p>
+                        <pre class="brush: php">
+                                $config['base_url']	= "";
+                        </pre>
+                        <p>Ex. If you are installing on <strong>subdomain</strong> you will set http://www.Quicksupport.domain.com/</p>
+                        <p>Ex. If you are installing on <strong>subfolder</strong> you will set http://www.domain.com/Quicksupport/</p>
+                        <p>Ex. If you are installing on <strong>main domain</strong> you will set http://www.domain.com/</p>
+                        <pre class="brush: php">
+                                $config['base_url']	= "http://www.Quicksupport.domain.com/";
+                        </pre>
+                        <div class="alert alert-warning">
+                            <p>
+                                <i class="fa fa-info"></i> The URL must ends with slash (/).
+                            </p>
+                        </div>
+                    </section>
+                    <!--end of #set-baseurl-->
+                    <section id="db-configure">
+                        <h3>Database Configuration</h3>
+                        <p>Open your site main root folder then open: <strong>application/config/database.php</strong> Change your database name, username and password here.</p>
+                        <pre class="brush: php">
+                            $db['default'] = array(
+                                'dsn'	=> '',
+                                'hostname' => 'your_database_hostname_here',
+                                'username' => 'your_database_username_here',
+                                'password' => 'your_database_password_here',
+                                'database' => 'support',
+                                'dbdriver' => 'mysqli',
+                                'dbprefix' => '',
+                                'pconnect' => FALSE,
+                                'db_debug' => (ENVIRONMENT !== 'production'),
+                                'cache_on' => FALSE,
+                                'cachedir' => '',
+                                'char_set' => 'utf8',
+                                'dbcollat' => 'utf8_general_ci',
+                                'swap_pre' => '',
+                                'encrypt' => FALSE,
+                                'compress' => FALSE,
+                                'stricton' => FALSE,
+                                'failover' => array(),
+                                'save_queries' => TRUE
+                            );
+                        </pre>
+                        <p>Once you did everything correctly your site is ready to user, navigate to your base URL to access site.</p>
+                    </section>
+                    <!--end of #db-configure-->
+                    
+                </section>
+                <!--end of #installation-->
+                <section id="customization">
+                    <h2>Customization</h2>
+                    <p>If you're thinking of customizing the app navigation and interface below some useful notes.</p>
+                    <section id="site-layout">
+                        <h3>Site Layout</h3>
+                        <p>Go to the root directory of application and open file <strong>/application/views/site/_layout.php</strong> Here you can set navigation and Account Buttons.</p>
+                        <img src="images/site_layout.png" alt="site layout" class="img-responsive">
+                    </section>
+                    <!--end of #site-layout-->
+                    <section id="admin-layout">
+                        <h3>Admin Layout</h3>
+                        <p>Go to the root directory of application and open file <strong>/application/views/admin/_layout.php</strong> Here you can set navigation and Account Buttons.</p>
+                        <img src="images/admin_layout.png" alt="admin layout" class="img-responsive">
+                    </section>
+                    <!--end of #admin-layout-->
+                    <section id="routes">
+                        <h3>Routes</h3>
+                        <p>If you want to change routes of site, Go to the root directory of application and open file <strong>/application/config/routes.php</strong>. Here you can change the route according to your requirements.</p>
+                        <pre class="brush: php">
+                                $route['default_controller'] = 'pages';
+                                $route['404_override'] = '';
+                                $route['translate_uri_dashes'] = TRUE;
+                                
+                                //Site Pages
+                                $route['search'] = 'pages/search';
+                                $route['articles'] = 'pages/articles';
+                                $route['articles/category/(:any)'] = 'pages/categories/$1';
+                                $route['article/(:any)'] = 'pages/article/$1';
+                                $route['faq'] = 'pages/faq';
+                                $route['submit-ticket'] = 'pages/submit_ticket';
+                                $route['contact'] = 'pages/contact';
+                                $route['login'] = 'auth/login';
+                                $route['logout'] = 'auth/logout';
+                                $route['register'] = 'auth/register';
+                                $route['activation/(:any)'] = 'auth/activation/$1';
+                                $route['forgot-password'] = 'auth/forgot_password';
+                                $route['reset-password/(:any)'] = 'auth/reset_password/$1';
+                                $route['reset_password_action'] = 'auth/reset_password_action';
+                                $route['switch/(:any)'] = 'pages/switch_language/$1';
+                                
+                                //Admin Authentication
+                                $route['admin/login'] = 'admin/auth/login';
+                                $route['admin/logout'] = 'admin/auth/logout';
+                                $route['admin/forgot-password'] = 'admin/auth/forgot_password';
+                                $route['admin/reset-password/(:any)'] = 'admin/auth/reset_password/$1';
+                                //Admin Profile
+                                $route['admin'] = 'admin/profile/dashboard';
+                                $route['admin/profile'] = 'admin/profile/index';
+                                $route['admin/change-password'] = 'admin/profile/change_password';
+                                $route['admin/switch/(:any)'] = 'admin/profile/switch_language/$1';
+                                //Admin Articles
+                                $route['admin/articles'] = 'admin/articles/list_articles';
+                                $route['admin/article/view'] = 'admin/articles/view_article';
+                                $route['admin/article/add'] = 'admin/articles/add_article';
+                                $route['admin/article/create'] = 'admin/articles/create_article';
+                                $route['admin/article/edit'] = 'admin/articles/edit_article';
+                                $route['admin/article/update'] = 'admin/articles/update_article';
+                                $route['admin/article/ordering'] = 'admin/articles/article_ordering';
+                                $route['admin/article/update_ordering'] = 'admin/articles/update_article_ordering';
+                                $route['admin/article/publish'] = 'admin/articles/publish_article';
+                                $route['admin/article/unpublish'] = 'admin/articles/unpublish_article';
+                                $route['admin/article/delete'] = 'admin/articles/delete_article';
+                                $route['admin/article/categories'] = 'admin/articles/categories';
+                                $route['admin/article/category/view'] = 'admin/articles/view_category';
+                                $route['admin/article/category/add'] = 'admin/articles/add_category';
+                                $route['admin/article/category/create'] = 'admin/articles/create_category';
+                                $route['admin/article/category/edit'] = 'admin/articles/edit_category';
+                                $route['admin/article/category/update'] = 'admin/articles/update_category';
+                                $route['admin/article/category/ordering'] = 'admin/articles/categories_ordering';
+                                $route['admin/article/category/update_ordering'] = 'admin/articles/update_categories_ordering';
+                                $route['admin/article/category/delete'] = 'admin/articles/delete_category';
+                                //Admin Tickets
+                                $route['admin/tickets'] = 'admin/tickets/list_tickets';
+                                $route['admin/ticket/view'] = 'admin/tickets/view_ticket';
+                                $route['admin/ticket/assign'] = 'admin/tickets/assign_ticket';
+                                $route['admin/ticket/reply'] = 'admin/tickets/reply_to_ticket';
+                                $route['admin/ticket/delete'] = 'admin/tickets/delete_ticket';
+                                $route['admin/ticket/completed'] = 'admin/tickets/mark_ticket_completed';
+                                $route['admin/ticket/incompleted'] = 'admin/tickets/mark_ticket_incompleted';
+                                $route['admin/ticket/categories'] = 'admin/tickets/categories';
+                                $route['admin/ticket/category/add'] = 'admin/tickets/add_category';
+                                $route['admin/ticket/category/create'] = 'admin/tickets/create_category';
+                                $route['admin/ticket/category/view'] = 'admin/tickets/view_category';
+                                $route['admin/ticket/category/edit'] = 'admin/tickets/edit_category';
+                                $route['admin/ticket/category/update'] = 'admin/tickets/update_category';
+                                $route['admin/ticket/category/ordering'] = 'admin/tickets/categories_ordering';
+                                $route['admin/ticket/category/update_ordering'] = 'admin/tickets/update_categories_ordering';
+                                $route['admin/ticket/category/delete'] = 'admin/tickets/delete_category';
+                                //Admin FAQ
+                                $route['admin/faqs'] = 'admin/faq/list_faqs';
+                                $route['admin/faq/view'] = 'admin/faq/view_faq';
+                                $route['admin/faq/add'] = 'admin/faq/add_faq';
+                                $route['admin/faq/create'] = 'admin/faq/create_faq';
+                                $route['admin/faq/edit'] = 'admin/faq/edit_faq';
+                                $route['admin/faq/update'] = 'admin/faq/update_faq';
+                                $route['admin/faq/ordering'] = 'admin/faq/faq_ordering';
+                                $route['admin/faq/update_ordering'] = 'admin/faq/update_faq_ordering';
+                                $route['admin/faq/publish'] = 'admin/faq/publish_faq';
+                                $route['admin/faq/unpublish'] = 'admin/faq/unpublish_faq';
+                                $route['admin/faq/delete'] = 'admin/faq/delete_faq';
+                                $route['admin/faq/categories'] = 'admin/faq/categories';
+                                $route['admin/faq/category/view'] = 'admin/faq/view_category';
+                                $route['admin/faq/category/add'] = 'admin/faq/add_category';
+                                $route['admin/faq/category/create'] = 'admin/faq/create_category';
+                                $route['admin/faq/category/edit'] = 'admin/faq/edit_category';
+                                $route['admin/faq/category/update'] = 'admin/faq/update_category';
+                                $route['admin/faq/category/ordering'] = 'admin/faq/categories_ordering';
+                                $route['admin/faq/category/update_ordering'] = 'admin/faq/update_categories_ordering';
+                                $route['admin/faq/category/delete'] = 'admin/faq/delete_category';
+                                //Admin Users
+                                $route['admin/users'] = 'admin/users/list_users';
+                                $route['admin/user/view'] = 'admin/users/view_user';
+                                $route['admin/user/add'] = 'admin/users/add_user';
+                                $route['admin/user/create'] = 'admin/users/create_user';
+                                $route['admin/user/edit'] = 'admin/users/edit_user';
+                                $route['admin/user/update'] = 'admin/users/update_user';
+                                $route['admin/user/block'] = 'admin/users/block_user';
+                                $route['admin/user/unblock'] = 'admin/users/unblock_user';
+                                $route['admin/user/delete'] = 'admin/users/delete_user';
+                                //Admin Settings
+                                $route['admin/settings/site'] = 'admin/settings/site_settings';
+                                $route['admin/settings/social-media'] = 'admin/settings/social_media_settings';
+                                $route['admin/settings/seo'] = 'admin/settings/seo_settings';
+                                $route['admin/settings/permissions'] = 'admin/settings/permissions';
+                                $route['admin/settings/app'] = 'admin/settings/app_settings';
+                        </pre>
+                    </section>
+                    <!--end of #routes-->
+                    <section id="theming">
+                        <h3>Theming</h3>
+                        <p>If you want to customize color theme of your application. Open <strong>assets/scss/_variable.scss</strong> file and change color value of following variables.</p>
+                        <pre class="brush: html">
+                            // Theme Colors Solid
+                            $theme-primary-color : #1d2c63;
+                            $theme-secondary-color : #40b1dd;
+                        </pre>
+                        <p>Open <strong>assets</strong> folder using terminal, Then run following command. </p>
+                        <pre class="brush: html">
+                            sass --watch scss:css
+                        </pre>
+                        <p>This will regenerate your CSS files. Then upload all files of <strong>/assets/css/</strong> to corresponding folders of server.</p>
+
+                        <div class="alert alert-warning">
+                            <p>
+                                <i class="fa fa-info"></i> Make sure that you have doing this on your local machine and your machine installed with <a href="https://sass-lang.com" target="_blank">SASS</a>
+                            </p>
+                        </div>
+                    </section>
+                    <!--end of #theming-->
+                </section>
+                <!--end of #installation-->
+                <section id="admin">
+                    <h2>Admin Panel</h2>
+                    <p>The administrator module having all privileges about this entire project.</p>
+                    <p><strong>Admin URL / Access</strong></p>
+                    <div class="table-responsive">
+                        <table class="table  table-striped table-bordered">
+                                    <thead>
+                            <tr>
+                                <th scope="col">URL</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Password</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">yoursitename.com/admin</th>
+                                <td>admin@example.com</td>
+                                <td>Admin@123</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Once you log in, You can change admin name, email and mobile by navigating <strong>yoursitename.com/admin/profile</strong></p>
+                    <p>You can Also change password navigating <strong>yoursitename.com/admin/change-password</strong>. Note That Your Old Password is <strong>Admin@123</strong></p>
+                    <div class="alert alert-warning">
+                        <p>
+                            <i class="fa fa-info"></i> Email Considered as Username.</a>
+                        </p>
+                    </div>
+                    <section id="dashboard">
+                        <h2>Dashboard</h2>
+                        
+                        <p>Dashboard shows the overview. You can see information about articles, tickets, FAQs and users. </p>
+                        <img src="images/dashboard.jpg" alt="dashboard" class="img-responsive">
+                        <ol>
+                            <li>Total Number of Articles.</li>
+                            <li>Total Number of Tickets.</li>
+                            <li>Total Number of FAQs.</li>
+                            <li>Total Number of Users. </li>
+                            <li>Recent Tickets.</li>
+                            <li>Recent Articles.</li>
+                        </ol>
+                    </section>
+                    <!--end of #dashboard-->
+                    <section id="articles">
+                        <h2>Articles</h2>
+                        <strong>Article List</strong>
+                        <p>Select Knowledge Base -> Articles from left side menu. All Articles listed here. You can filter articles, create articles, view article, edit article, publish/unpublish article, delete article and change order of articles.</p>
+                        <img src="images/articles.jpg" alt="articles" class="img-responsive">
+                        <ol>
+                            <li>All articles listed here</li>
+                            <li>To filter articles list enter filter values and click on Filter Article button.</li>
+                            <li>To Create new article click on Add Article Button.</li>
+                            <li>To view article click on 3 dots located in right side article then select View.</li>
+                            <li>To edit article click on 3 dots located in right side article then select Edit.</li>
+                            <li>To publish/unpublish article click on 3 dots located in right side article then select Publish/Unpublish.</li>
+                            <li>To delete article click on 3 dots located in right side article then select Delete.</li>
+                            <li>To change order of articles click on Article Ordering tab, Then select article category from dropdown, then drag and drop article title to the positions.</li>
+                        </ol>
+                        <strong>Article Categories</strong>
+                        <p>Select Knowledge Base -> Article Categories from left side menu. All Article Categories listed here. You can create category, edit category, view category, delete category and change order of category. </p>
+                        <img src="images/article-categories.jpg" alt="Article Categories" class="img-responsive">
+                        <ol>
+                            <li>All articles categories listed here.</li>
+                            <li>To change order of categories click on Categories Ordering tab, Then drag and drop category names to the positions.</li>
+                            <li>To Create new category click on Add Category Button.</li>
+                            <li>To view category click on 3 dots located in right side category then select View.</li>
+                            <li>To edit category click on 3 dots located in right side category then select Edit.</li>
+                            <li>To delete category click on 3 dots located in right side category then select Delete.</li>
+                        </ol>
+                    </section>
+                    <!--end of #articles-->
+                    <section id="tickets">
+                        <h2>Tickets</h2>
+                        <strong>Ticket List</strong>
+                        <p>Select Tickets -> List Tickets from left side menu. All tickets listed here. You can filter tickets, view and reply to ticket, assign tickets to admin users, marks as completed/mark as incompleted tickets and delete ticket.</p>
+                        <img src="images/tickets.jpg" alt="Ticket List" class="img-responsive">
+                        <ol>
+                            <li>All tickets listed here.</li>
+                            <li>To filter tickets list enter filter values and click on Filter Tickets button.</li>
+                            <li>To view and reply to ticket click on 3 dots located in right side ticket then select View and Reply. A new window will Open with two tabs. In Ticket Info you can view ticket details. In Reply to Ticket tab you can reply to the ticket. </li>
+                            <li>To assign ticket to other admin users click on 3 dots located in right side ticket then select Assign.</li>
+                            <li>To complete/incomplete ticket click on 3 dots located in right side ticket then select Mark as Completed/Mark as Incompleted.</li>
+                            <li>To delete ticket click on 3 dots located in right side ticket then select Delete.</li>
+                        </ol>
+                        <strong>Ticket Categories</strong>
+                        <p>Select Tickets -> Ticket Categories from left side menu. All Ticket Categories listed here. You can create category, edit category, view category, delete category and change order of category.</p>
+                        <img src="images/ticket-categories.jpg" alt="Ticket Categories" class="img-responsive">
+                        <ol>
+                            <li>All ticket categories listed here.</li>
+                            <li>To change order of categories click on Categories Ordering tab, Then drag and drop category names to the positions.</li>
+                            <li>To Create new category click on Add Category Button.</li>
+                            <li>To view category click on 3 dots located in right side category then select View.</li>
+                            <li>To edit category click on 3 dots located in right side category then select Edit.</li>
+                            <li>To delete category click on 3 dots located in right side category then select Delete.</li>
+                        </ol>
+                    </section>
+                    <!--end of #tickets-->
+                    <section id="faqs">
+                        <h2>FAQs</h2>
+                        <strong>List FAQ</strong>
+                        <p>Select FAQ -> List FAQ from left side menu. All FAQ listed here. You can filter FAQ, create FAQ, view FAQ, edit FAQ, publish/unpublish FAQ, delete FAQ and change order of FAQs. </p>
+                        <img src="images/faqs.jpg" alt="List FAQ" class="img-responsive">
+                        <ol>
+                            <li>All FAQ listed here.</li>
+                            <li>To filter FAQs list enter filter values and click on Filter FAQ button.</li>
+                            <li>To Create new FAQ click on Add FAQ Button.</li>
+                            <li>To view FAQ click on 3 dots located in right side FAQ then select View.</li>
+                            <li>To edit FAQ click on 3 dots located in right side FAQ then select Edit.</li>
+                            <li>To publish/unpublsh FAQ click on 3 dots located in right side FAQ then select Publish/Unpublish.</li>
+                            <li>To delete FAQ click on 3 dots located in right side FAQ then select Delete.</li>
+                            <li>To change order of FAQ click on FAQ Ordering tab, Then select FAQ category from dropdown, then drag and drop FAQ title to the positions. </li>
+                        </ol>
+                        <strong>FAQ Categories</strong>
+                        <p>Select FAQ -> FAQ Categories from left side menu. All FAQ Categories listed here. You can create category, edit category, view category, delete category and change order of category. </p>
+                        <img src="images/faq-categories.jpg" alt="FAQ Categories" class="img-responsive">
+                        <ol>
+                            <li>All FAQ categories listed here</li>
+                            <li>To change order of categories click on Categories Ordering tab, Then drag and drop category names to the positions.</li>
+                            <li>To Create new category click on Add Category Button.</li>
+                            <li>To view category click on 3 dots located in right side category then select View.</li>
+                            <li>To edit category click on 3 dots located in right side category then select Edit.</li>
+                            <li>To delete category click on 3 dots located in right side category then select Delete.</li>
+                        </ol>
+                    </section>
+                    <!--end of #faqs-->
+                    <section id="users">
+                        <h2>Users</h2>
+                        <strong>List Users</strong>
+                        <p>Select Users -> List Users from left side menu. All Users listed here. You can filter User, create User, view User, edit User, block/unblock User and delete User.</p>
+                        <img src="images/users.jpg" alt="List Users" class="img-responsive">
+                        <ol>
+                            <li>All Users listed here.</li>
+                            <li>To filter Users list enter filter values and click on Filter Users button.</li>
+                            <li>To Create new User click on Add User Button.</li>
+                            <li>To view User click on 3 dots located in right side User then select View.</li>
+                            <li>To edit User click on 3 dots located in right side User then select Edit.</li>
+                            <li>To block/unblock User click on 3 dots located in right side User then select Block/Unblock.</li>
+                            <li>To delete User click on 3 dots located in right side User then select Delete.</li>
+                        </ol>
+                        <strong>User Permissions</strong>
+                        <p>Select Users -> User Permissions from left side menu. You give special permission to specific admin users rather than role based permission. </p>
+                        <img src="images/user-permissions.jpg" alt="User Permissions" class="img-responsive">
+                        <ol>
+                            <li>Select an Admin User you wan to give special permission and click on Filter Permissions Button. </li>
+                            <li>All Permissions of that user will list here.</li>
+                            <li>Toggle the Action button right to permission name for giving access or removing access.</li>
+                        </ol>
+                    </section>
+                    <!--end of #users-->
+                    <section id="settings">
+                        <h2>Settings</h2>
+                        <strong>Site Settings</strong>
+                        <p>Select Settings -> Site Settings from left side menu. Here you can update site name, logo, favicon, email and phone. </p>
+                        <img src="images/site-settings.jpg" alt="Site Settings" class="img-responsive">
+                        <ol>
+                            <li>Change to your values and click on Save Settings Button.</li>
+                        </ol>
+                        <strong>Social Media Settings</strong>
+                        <p>Select Settings -> Social Media Settings from left side menu. Here you can update social media links. </p>
+                        <img src="images/social-media-settings.jpg" alt="Social Media Settings" class="img-responsive">
+                        <ol>
+                            <li>Change to your values and click on Save Settings Button.</li>
+                        </ol>
+                        <strong>SEO Settings</strong>
+                        <p>Select Settings -> SEO Settings from left side menu. Here you can update SEO Related Information. </p>
+                        <img src="images/seo-settings.jpg" alt="SEO Settings" class="img-responsive">
+                        <ol>
+                            <li>Change to your values and click on Save Settings Button.</li>
+                        </ol>
+                        <strong>Permissions</strong>
+                        <p>Select Settings -> Permissions from left side menu. Here you can update Role Based Permissions. </p>
+                        <img src="images/permissions.jpg" alt="Permissions" class="img-responsive">
+                        <ol>
+                            <li>You can filter the permission by its name.</li>
+                            <li>Toggle the Action button permission name/role name for giving access or removing access.</li>
+                        </ol>
+                        <strong>App Settings</strong>
+                        <p>Select Settings -> App Settings from left side menu. Here you can update basic app configurations. </p>
+                        <img src="images/app-settings.jpg" alt="App Settings" class="img-responsive">
+                        <ol>
+                            <li>Toggle the Action button right to setting name for enable/disable.</li>
+                            <li>Click on Save Settings Button.</li>
+                        </ol>
+                        <strong>Email Settings</strong>
+                        <p>Select Settings -> Email Settings from left side menu. Here you can update Email related and SMTP details. </p>
+                        <img src="images/email-settings.jpg" alt="Email Settings" class="img-responsive">
+                        <ol>
+                            <li>Change to your values and click on Save Settings Button.</li>
+                        </ol>
+                        <strong>Email Templates</strong>
+                        <p>Select Settings -> Email Templates from left side menu. Here you can update all email templates. </p>
+                        <img src="images/email-templates.jpg" alt="Email Templates" class="img-responsive">
+                        <ol>
+                            <li>Click the edit button to edit template.</li>
+                        </ol>
+                    </section>
+                    <!--end of #settings-->
+                    <section id="profile">
+                        <h2>Profile</h2>
+                        <strong>Update Profile</strong>
+                        <p>Here you can update name, phone, email and profile image. </p>
+                        <img src="images/profile.jpg" alt="Profile" class="img-responsive">
+                        <ol>
+                            <li>Click on User icon from right header, Then select Profile Menu.</li>
+                            <li>Click on Edit icon profile image, Then select an image and crop image to update profile image.</li>
+                            <li>Change to your values and click on Update Profile Button.</li>
+                        </ol>
+                        <strong>Change Password</strong>
+                        <p>Here you can update your password. </p>
+                        <img src="images/change-password.jpg" alt="Change Password" class="img-responsive">
+                        <ol>
+                            <li>Click on User icon from right header, Then select Profile Menu.</li>
+                            <li>Click on Change Password link from user menu.</li>
+                            <li>Change to your values and click on Change Password Button</li>
+                        </ol>
+                    </section>
+                    <!--end of #profile-->
+                </section>
+                <!--end of #admin-->
+
+                <section id="versions">
+                    <h2>Version History</h2>
+                    <p>Version history represents the changes and updates made in each version. You can check change log
+                        on
+                        script sale page also.</p>
+                    <p>Once again, thank you so much for purchasing this script. As I said at the beginning, I'd be glad
+                        to help
+                        you if you have any questions relating to this script. If you
+                        have a more general question relating to the script on Codecanyon, You might consider visiting
+                        the forums
+                        and asking your question in the "Item Discussion" section.</p>
+                    <pre class="brush: html">
+                        -----------------------------------------------------------------------------------------
+                        Version 1.0
+                        -----------------------------------------------------------------------------------------
+                        - Initial Release
+						-----------------------------------------------------------------------------------------
+                        Version 2.0
+                        -----------------------------------------------------------------------------------------
+						- Improved Many Layout
+						- Added Users Permission
+						-----------------------------------------------------------------------------------------
+                        Version 3.0
+                        -----------------------------------------------------------------------------------------
+						- Fixed All Bugs
+						- Security Update
+                      </pre>
+                </section>
+                <!--end of #versions-->
+
+                <section id="rateus">
+                    <h2>Rate Us!</h2>
+                    <p>Don't forgot add rating for the script. Your support is our fuel!</p>
+                </section>
+                <!--end of #rateus-->
+
+                <section id="thankyou">
+                    <h2>Thank You!</h2>
+                    <p>Once again, Thank you so much for purchasing this script and being by loyal customer. If you
+                        have any
+                        questions beyond the scope of this document you can mail to <a
+                            href="mailto:myquick@yahoo.com">myquick@yahoo.com</a></p>
+                </section>
+                <!--end of #rateus-->
+            </div>
+
+        </div>
+        <!--end of .row-->
+    </div>
+    <!--end of .container-->
+    <footer>
+        <p class="text-center">Script documentation by Quicksupport
+        </p>
+    </footer>
+</body>
+<script src='js/jquery.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+
+
+<script src="js/syntax-highlighter/scripts/shCore.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushPhp.js"></script>
+
+
+
+<script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

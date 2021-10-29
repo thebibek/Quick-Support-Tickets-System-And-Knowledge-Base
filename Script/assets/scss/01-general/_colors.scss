@@ -1,0 +1,63 @@
+//Theme Colors
+@each $label, $color in $colors-list {
+	.text-#{$label} {
+		color:$color;
+		a:link, a:visited {
+			color:$color;
+		}
+		a:hover, a:active {
+			color:mix(black, $color, 15%);
+		}
+	}
+	a.text-#{$label} {
+		&:hover, &:active {
+			color:mix(black, $color, 15%);
+		}
+	}
+	.text-alpha-#{$label} {
+		color:rgba($color, 0.5);
+	}
+}
+//Background Color
+@each $label, $color in $colors-list { .bg-#{$label} { background-color:$color; } }
+//Border Color
+@each $label, $color in $colors-list { .border-#{$label} { border:$color; } }
+//Fill Color
+@each $label, $color in $colors-list { .fill-#{$label} { fill:$color; } }
+//Stroke Color
+@each $label, $color in $colors-list { .stroke-#{$label} { stroke:$color; } }
+//Overlay Color
+@each $label, $color in $colors-list { .overlay-#{$label} { background-color:rgba($color,0.8); } }
+//Gradient Background Colors
+@each $label,$color in $gradient-colors-list { .bg-#{$label } { background-image: $color; } }
+
+//Social Media Colors
+@each $label, $color in $social-media-variables {
+	.color-#{$label} {
+		color:$color;
+		a:link, a:visited {
+			color:$color;
+		}
+		a:hover, a:active {
+			color:mix(black, $color, 15%);
+		}
+	}
+	a.color-#{$label} {
+		&:hover, &:active {
+			color:mix(black, $color, 15%);
+		}
+	}
+}
+//Background Color
+@each $label, $color in $social-media-variables { .bg-#{$label} { background-color:$color; } }
+//Border Color
+@each $label, $color in $social-media-variables { .border-#{$label} { border:$color; } }
+//Fill Color
+@each $label, $color in $social-media-variables { .fill-#{$label} { fill:$color; } }
+//Stroke Color
+@each $label, $color in $social-media-variables { .stroke-#{$label} { stroke:$color; } }
+
+//Overlay
+.overlay{
+	@include overlay();
+}

@@ -1,0 +1,232 @@
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+     -khtml-#{$property}: #{$value};
+       -moz-#{$property}: #{$value};
+        -ms-#{$property}: #{$value};
+         -o-#{$property}: #{$value};
+            #{$property}: #{$value};
+  }
+  /// Border Radius Separate
+  /// @param {Size} $topLeftRadius [5px] - Top Left
+  /// @param {Size} $topRightRadius [5px] - Top Right
+  /// @param {Size} $bottomLeftRadius [5px] - Bottom Left
+  /// @param {Size} $bottomRightRadius [5px] - Bottom Right
+  
+  @mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+    -webkit-border-top-left-radius:     $topLeftRadius;
+    -webkit-border-top-right-radius:    $topRightRadius;
+    -webkit-border-bottom-right-radius: $bottomRightRadius;
+    -webkit-border-bottom-left-radius:  $bottomLeftRadius;
+  
+    -moz-border-radius-topleft:     $topLeftRadius;
+    -moz-border-radius-topright:    $topRightRadius;
+    -moz-border-radius-bottomright: $bottomRightRadius;
+    -moz-border-radius-bottomleft:  $bottomLeftRadius;
+  
+    border-top-left-radius:     $topLeftRadius;
+    border-top-right-radius:    $topRightRadius;
+    border-bottom-right-radius: $bottomRightRadius;
+    border-bottom-left-radius:  $bottomLeftRadius;
+  }
+  /// Opacity
+  /// @param {Double} $opacity [0.5] - Opacity
+  /// @require {mixin} css3-prefix
+  
+  @mixin opacity($opacity: 0.5) {
+    $opacityMultiplied: ($opacity * 100);
+  
+    filter:         alpha(opacity=$opacityMultiplied);
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+    @include css3-prefix('opacity', $opacity);
+  }
+  
+  /// Transform
+  /// @param {List} $params - Params
+  /// @require {mixin} css3-prefix
+  
+  @mixin transform($params) {
+    @include css3-prefix('transform', $params);
+  }
+  /// Box Sizing
+  /// @param {*} $type [border-box] - Type
+  /// @require {mixin} css3-prefix
+  
+  @mixin box-sizing($type: border-box) {
+    @include css3-prefix('box-sizing', $type);
+  }
+  /// Transition
+  /// @param {List} $properties - Properties
+  /// @require {mixin} css3-prefix
+  
+  @mixin transition($properties...) {
+  
+    @if length($properties) >= 1 {
+      @include css3-prefix('transition', $properties);
+    }
+  
+    @else {
+      @include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+    }
+  }
+  /// Border Radius
+  /// @param {Size} $radius [5px] - Radius
+  /// @require {mixin} css3-prefix
+  
+  @mixin border-radius($radius: 5px) {
+    @include css3-prefix('border-radius', $radius);
+  }
+  ///Links
+  @mixin links() {
+    text-decoration: none;
+    outline: 0;
+    @include transition(all 0.3s ease-in-out);
+  }
+  ///Breakpoints
+  /// @param {*} $point [breakpoint] - Type
+  @mixin breakpoint($point) {
+    @if ($point == lg) {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else
+    if ($point == md) {
+      @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+      }
+    } @else
+    if ($point == sm) {
+      @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+      }
+    } @else
+    if ($point == xs) {
+      @media (max-width: 767px) and (min-width: 641px) {
+        @content;
+      }
+    } @else
+    if ($point == xxs) {
+      @media (max-width: 640px) and (min-width: 481px) {
+        @content;
+      }
+    } @else
+    if ($point == xxxs) {
+      @media (max-width: 480px) {
+        @content;
+      }
+    }@else
+    if ($point == maxlg) {
+      @media (max-width: 1200px) {
+        @content;
+      }
+    } @else
+    if ($point == minlg) {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }@else
+    if ($point == maxmd) {
+      @media (max-width: 991px) {
+        @content;
+      }
+    } @else
+    if ($point == minmd) {
+      @media (min-width: 991px) {
+        @content;
+      }
+    }@else
+    if ($point == maxsm) {
+      @media (max-width: 768px) {
+        @content;
+      }
+    } @else
+    if ($point == minsm) {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else
+    if ($point == maxxs) {
+      @media (max-width: 550px) {
+        @content;
+      }
+    } @else
+    if ($point == minxs) {
+      @media (min-width: 550px) {
+        @content;
+      }
+    } @else
+    if ($point == maxxxs) {
+      @media (max-width: 480px) {
+        @content;
+      }
+    } @else
+    if ($point == minxxs) {
+      @media (min-width: 480px) {
+        @content;
+      }
+    }@else
+    if ($point == print) {
+      @media print {
+        @content;
+      }
+    }
+  }
+  
+  ///Placeholders
+  
+  @mixin placeholder {
+    &::-webkit-input-placeholder {
+      @content;
+    }
+  
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      @content;
+    }
+  
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      @content;
+    }
+  
+    &:-ms-input-placeholder {
+      @content;
+    }
+  }
+  
+  /// Box Shadow
+  /// @param {Size} $x [2px] - X
+  /// @param {Size} $y [2px] - Y
+  /// @param {Size} $blur [5px] - Blur
+  /// @param {Color} $color [rgba(0,0,0,.4)] - Color
+  /// @param {Boolean} $inset - Inset
+  
+  @mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+    @if ($inset != "") {
+      @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+    } @else {
+      @include css3-prefix('box-shadow', $x $y $blur $color);
+    }
+  }
+  
+  /// Border Color Opacity
+  /// @param {Color} $color [100%] - Color
+  /// @param {Double} $opacity [0.85] - Opacity
+  
+  @mixin border-color-opacity($color: #000, $opacity: 0.85) {
+    border-color: $color;
+    border-color: rgba($color, $opacity);
+  }
+  
+  //Overlay
+  @mixin overlay(){
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }

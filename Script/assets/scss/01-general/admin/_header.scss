@@ -1,0 +1,227 @@
+.app-header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	display: flex;
+	background-color: $theme-white-color;
+	
+	z-index: 1030;
+	padding-right: 15px;
+	box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.2);
+	@include breakpoint(minsm) {
+		padding-right: 30px 
+	}
+	@include breakpoint(print) {
+		display: none;
+	}
+}
+.app-header-logo{
+    flex: 1 0 auto;
+    color: $theme-white-color;
+	text-align: center;
+	padding: 0 15px;
+	font-size: 26px;
+	font-weight: 500;
+    line-height: 50px;
+	@include breakpoint(minsm) {
+		flex: 0 0 auto;
+		display: block;
+		width: 280px;
+        background-color: $theme-white-color;
+	}
+    &:focus,
+	&:hover {
+		text-decoration: none;
+		color: $theme-white-color;
+	}
+	img{
+		height: 40px;
+		width: auto;
+	}
+}
+.app-sidebar-toggle{
+    padding: 0 15px;
+	font-family: 'LineIcons';
+	color: $theme-primary-color;
+	line-height: 2.4;
+    transition: background-color 0.3s ease;
+	@include breakpoint(maxsm) {
+		order: -1;
+	}
+    &:before {
+		content: "\eab8";
+		font-size: 21px;
+	}
+	&:focus,
+	&:hover {
+		color: $theme-secondary-color;
+		text-decoration: none;
+	}
+}
+
+.app-nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+	display: flex;
+	margin-bottom: 0;
+	justify-content: flex-end;
+	@include breakpoint(minsm) {
+		flex: 1 0 auto;
+	}
+}
+.app-nav-item {
+	display: block;
+	padding: 15px;
+	line-height: 24px;
+	color: $theme-primary-color;
+	transition: background-color 0.3s ease;
+	font-size: 18px;
+	&:hover,
+	&:focus {
+		color: $theme-secondary-color;
+	}
+}
+
+.app-search {
+	position: relative;
+	display: flex;
+	align-self: center;
+	margin-right: 15px;
+	padding: 10px 0;
+	@include breakpoint(maxxxs) {
+		display: none;
+	}
+}
+
+.app-search-input {
+	border: 0;
+	padding: 5px 10px;
+	padding-right: 30px;
+	border-radius: 22px;
+	background-color: lighten($theme-light-grey, 2);
+	transition: background-color 0.3s ease;
+	color: rgba($theme-grey-color,0.9);
+	&::placeholder { color: rgba($theme-grey-color,0.5); }
+}
+.app-search-button {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	bottom: 10px;
+	padding: 0 10px;
+	border: 0;
+	color: rgba($theme-grey-color,0.5);
+	background: none;
+	cursor: pointer;
+}
+
+.app-notification { 
+	min-width: 300px; 
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border: 0px !important;
+	@include border-radius(3px);
+	@include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+}
+.app-notification-title {
+	padding: 8px 20px;
+	text-align: center;
+	background-color: transparentize($theme-primary-color, 0.7);
+	color: $heading-color;
+	@include border-radius-separate(3px, 3px, 0px, 0px);
+	font-size: 14px;
+}
+.app-notification-footer {
+	padding: 8px 20px;
+	text-align: center;
+	background-color: $theme-secondary-color;
+	@include border-radius-separate(0px, 0px, 3px, 3px);
+	a{
+		color: $theme-white-color;
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+}
+.app-notification-content {
+	max-height: 220px;
+	overflow-y: auto;
+	&::-webkit-scrollbar { width: 6px; }
+	&::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); }
+}
+.app-notification-item {
+	display: flex;
+	padding: 8px 20px;
+	color: inherit;
+	border-bottom: 1px solid $theme-light-grey;
+	transition: background-color 0.3s ease;
+	&:focus,
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+		background-color: $theme-light-grey;
+	}
+	.app-notification-holder{
+		.app-notification-icon { 
+			margin-right: 10px;
+			width: 35px;
+			height: 35px;
+			[dir=rtl] & {
+				margin-right: 0px;
+				margin-left: 10px;
+			}
+			img{
+				width: 35px;
+				height: 35px;
+				@include border-radius(50%);
+			}
+		}
+		.app-notification-message,
+		.app-notification-meta {
+			margin-bottom: 0;
+			[dir=rtl] & {
+				text-align: right;
+			}
+		}
+		.app-notification-message { 
+			line-height: 1.2; 
+			font-size: 14px;
+			color: $body-font-color;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			[dir=rtl] & {
+				font-size: 15px;
+			}
+		}
+		.app-notification-meta { 
+			font-size: 12px;
+			color: $theme-grey-color;
+			[dir=rtl] & {
+				font-size: 13px;
+			}
+		}
+	}
+}
+.settings-menu{
+	min-width: 170px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border: 0px !important;
+	@include border-radius(3px);
+	@include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+	font-size: 14px;
+	color: $body-font-color;
+	.dropdown-item {
+		color: $body-font-color;
+	}
+	[dir=rtl] & {
+		text-align: right !important;
+		font-size: 15px;
+	}
+}
+
+
+

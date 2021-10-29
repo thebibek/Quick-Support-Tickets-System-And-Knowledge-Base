@@ -1,0 +1,50 @@
+.page-loader{
+    background: $theme-white-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    
+}
+.ripple-loader {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    div {
+      position: absolute;
+      border: 4px solid $theme-secondary-color;
+      opacity: 1;
+      border-radius: 50%;
+      animation: ripple-loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      &::nth-child(2){
+        animation-delay: -0.5s;
+      }
+    }
+
+  
+    
+    
+  }
+  
+  @keyframes ripple-loader {
+    0% {
+      top: 28px;
+      left: 28px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -1px;
+      left: -1px;
+      width: 58px;
+      height: 58px;
+      opacity: 0;
+    }
+  }

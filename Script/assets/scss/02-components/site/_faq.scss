@@ -1,0 +1,93 @@
+.faq-style-one {
+    .faq-holder {
+        border: 1px solid $theme-light-grey;
+        margin-bottom: 3px;
+        border-bottom: 0;
+
+        .faq-header {
+            border-bottom: 1px solid $theme-light-grey;
+            padding: 10px 15px;
+
+            a {
+                font-size: 18px;
+                &::after {
+                    content: "";
+                    position: relative;
+                    top: 1px;
+                    display: inline-block;
+                    font-family: 'LineIcons' !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    float: right;
+                    transition: transform 0.25s linear;
+                    -webkit-transition: -webkit-transform 0.25s linear;
+                }
+            }
+
+            a[aria-expanded="true"]:after {
+                content: "\ea43";
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            a[aria-expanded="false"]:after {
+                content: "\ea43";
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+
+        .collapse {
+            &.show {
+                border-bottom: 1px solid $theme-light-grey;
+            }
+        }
+
+        .faq-body {
+            padding: 15px;
+        }
+    }
+}
+
+.faq-categories {
+    @include breakpoint(minmd) {
+        position: fixed;
+    }
+
+    .nav-pills {
+        .nav-link.active,
+        .show > .nav-link {
+            background-color: $theme-white-color;
+            color: $body-font-color;
+            border-left: 2px solid $theme-primary-color;
+
+            &:hover {
+                color: $theme-secondary-color;
+            }
+        }
+    }
+
+    .nav-link {
+        border-left: 2px solid $theme-white-color;
+        border-radius: 0;
+        font-weight: 500;
+    }
+}
+
+.faq-item{
+    .faq-icon{
+        display: block;
+        background: $theme-secondary-color;
+        width:40px;
+        height: 40px;
+        margin-right: 10px;
+        color: $theme-white-color;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        @include border-radius(50%);
+    }
+}

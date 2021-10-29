@@ -1,0 +1,104 @@
+.sidebar-mini.sidenav-toggled {
+    @include breakpoint(minsm) {
+
+        .app-sidebar-user-name,
+        .app-sidebar-user-designation,
+        .treeview-indicator {
+            display: none;
+        }
+
+        .app-sidebar-user-avatar {
+            width: 30px;
+            height: 30px;
+        }
+
+        .app-content {
+            margin-left: 50px !important;
+        }
+
+        .app-sidebar {
+            left: 0 !important;
+            width: 50px;
+            overflow: hidden;
+
+            &:hover {
+                overflow: visible;
+            }
+        }
+        .app-menu {
+            margin: 0px !important;
+        }
+
+        .app-menu-item {
+            overflow: hidden;
+            border-radius: 0px !important;
+            margin-bottom: 0px !important;
+
+
+            &:hover {
+                overflow: visible;
+
+                .app-menu-label {
+                    opacity: 1;
+                }
+
+                &+.treeview-menu {
+                    visibility: visible;
+                }
+            }
+        }
+
+        .app-menu-label {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50px;
+            min-width: 180px;
+            padding: 12px 5px 12px 20px;
+            margin-left: -3px;
+            line-height: 1;
+            opacity: 0;
+            background: $theme-light-grey;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .treeview {
+            &:hover {
+                .app-menu-item {
+                    overflow: visible;
+                    background: $theme-light-grey;
+                    border-left-color: $theme-secondary-color;
+                }
+
+                .app-menu-label {
+                    opacity: 1;
+                }
+
+                .treeview-menu {
+                    max-height: 100vh;
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 10;
+                }
+            }
+
+            .app-menu-label {
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .treeview-menu {
+            position: absolute;
+            left: 50px;
+            min-width: 180px;
+            padding: 12px 0;
+            opacity: 0;
+            border-bottom-right-radius: 4px;
+            z-index: 9;
+            visibility: hidden;
+            transition: visibility 0.3s ease;
+        }
+    }
+
+}

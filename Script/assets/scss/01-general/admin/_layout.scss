@@ -1,0 +1,82 @@
+// Page common styles
+
+::selection {
+	color: $theme-white-color;
+	background-color: darken($theme-primary-color,10%);
+}
+
+.app {
+	// On large devices make sidebar visible by default
+	// adding sidenav-toggled class will close sidebar
+	@media(min-width: 768px) {
+		&.sidenav-toggled {
+			.app-content { margin-left: 0; }
+			.app-sidebar { left: -280px; }
+			.app-sidebar-overlay { visibility: hidden; }
+		}
+	}
+	// On small devices make sidebar collapsed by default
+	// adding sidenav-toggled class will open sidebar
+	@media(max-width: 767px) {
+		overflow-x: hidden;
+		.app-sidebar { left: -280px; }
+		.app-sidebar-overlay { visibility: hidden; }
+		&.sidenav-toggled {
+			.app-content { margin-left: 0; }
+			.app-sidebar { left: 0; }
+			.app-sidebar-overlay { visibility: visible; }
+		}
+	}
+	&.app-login{
+		background: $theme-light-bg;
+		.login-holder{
+			margin-top: 150px;
+		}
+	}
+}
+.app-content {
+	min-height: calc(100vh - 50px);
+	margin-top: 50px;
+	padding: 30px;
+	background-color: $theme-light-bg;
+	transition: margin-left 0.3s ease;
+	@media(min-width: 768px) { margin-left: 280px; }
+	@media(max-width: 767px) {
+		margin-top: 50px;
+		min-width: 100%;
+	}
+	@media(max-width: 480px) { padding: 15px; }
+	@media print {
+		margin: 0;
+		padding: 0;
+		background-color: $theme-white-color;
+	}
+}
+//Material Half Bg
+.material-half-bg {
+	height: 100vh;
+	background-color: $theme-white-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	.cover {
+		background-color: $theme-primary-color;
+		height: 50vh;
+	}
+}
+//Icon Demo
+.icon-wrapper {
+	margin: 10px 0;
+	span {
+		font-size: 20px;
+		padding-right: 7px;
+		color: $theme-secondary-color;
+	}
+	.mls {
+		font-size: 14px;
+		color: $body-font-color
+	}
+}

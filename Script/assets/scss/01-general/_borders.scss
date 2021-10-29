@@ -1,0 +1,44 @@
+//Borders and Outline adjustment
+$spaceamounts: (
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+);
+$sides: (
+  "": "all",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+@each $space in $spaceamounts {
+  @each $prefix, $value in $sides {
+    $property: if($prefix == '', '', -#{$value});
+
+    .b#{$prefix}#{$space} {
+      border#{$property}-width: #{$space}px;
+    }
+
+  }
+}
+.bc-dark{
+    border-color: $theme-black-color;
+}
+.bc-white{
+    border-color: $theme-white-color;
+}
+.bc-grey{
+    border-color: $theme-light-grey;
+}
+.b-solid{
+    border-style:solid;
+}
+.b-dotted{
+    border-style:dotted;
+}
+.b-dashed{
+    border-style:dashed;
+}

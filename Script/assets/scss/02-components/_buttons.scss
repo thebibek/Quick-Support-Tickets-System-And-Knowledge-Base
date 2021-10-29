@@ -1,0 +1,142 @@
+//Buttons
+.btn{
+  line-height: 1.5rem;
+  font-size: 15px;
+  font-family: $heading-font;
+  padding:8px 15px 6px 15px;
+  &.btn-xl{
+    font-size: 16px;
+    padding:12px 25px 12px 25px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  &.btn-lg{
+    font-size: 16px;
+    padding:10px 25px 8px 25px;
+    font-weight: 500;
+  }
+  &.btn-sm{
+    font-size: 14px;
+    padding:6px 10px 4px 10px;
+  }
+  &.btn-flat{
+    border-radius: 0px;
+  }
+}
+
+.btn-oval{
+  border-radius: 20px;
+  &.btn-xl{
+    border-radius: 40px;
+  }
+  &.btn-lg{
+    border-radius: 30px;
+  }
+}
+
+.btn-fab{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0px;
+  line-height: 40px;
+  @include border-radius(50%);
+  @include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+//Theme Buttons
+@each $label, $color in $colors-list {
+  //Solid Buttons
+	.btn-#{$label} {
+    background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+	}
+	a.btn-#{$label} {
+		background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+  }
+  //Outline Buttons
+  .btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+  }
+  //Outline Links
+  a.btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+	}
+}
+
+//Social Buttons
+@each $label, $color in $social-media-variables {
+	.btn-#{$label} {
+    background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+	}
+	a.btn-#{$label} {
+		background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+  }
+  .btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+  }
+  a.btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+	}
+}
+
+
+//Gradient Buttons
+@each $label,$color in $gradient-colors-list { 
+  .btn-#{$label } { 
+    background-image:$color;
+    color: $theme-white-color;
+    border-color:mix(white, white, 10%);
+    &:hover, &:active {
+			color: white;
+		}
+  } 
+}

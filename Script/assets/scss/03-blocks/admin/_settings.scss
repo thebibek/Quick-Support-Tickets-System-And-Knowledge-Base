@@ -1,0 +1,21 @@
+.site-logo-holder{
+    margin: 10px 0px;
+    padding: 5px;
+    border: 1px solid $theme-light-grey;
+    width: 212px;
+    img{
+        height: auto;
+        width: 200px;
+    }
+}
+.site-favicon-holder{
+    margin: 10px 0px;
+    padding: 5px;
+    border: 1px solid $theme-light-grey;
+    width: 44px;
+    height: 44px;
+    img{
+        width: 32px;
+        height: 32px;
+    }
+}

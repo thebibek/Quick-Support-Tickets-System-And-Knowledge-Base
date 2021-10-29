@@ -1,0 +1,432 @@
+/** Form Control **/
+.form-control {
+    min-height: 45px;
+    border: 1px solid $theme-light-grey;
+    color: $body-font-color;
+    @include border-radius(25px);
+
+    @include placeholder {
+        color: $theme-grey-color !important;
+    }
+
+}
+
+select:focus,
+textarea:focus,
+input:focus {
+    @include border-color-opacity($theme-primary-color, 0.5);
+    box-shadow: none !important;
+    outline: 0 none;
+}
+
+/** Iconic Input **/
+.iconic-text-input {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        font-size: 18px;
+        color: $theme-grey-color;
+    }
+}
+.search-text-input{
+	position: relative;
+	button{
+		position: absolute;
+		background: $theme-primary-color;
+		color: $theme-white-color;
+		border:1px solid $theme-primary-color;
+		@include border-radius-separate(0px, 25px, 0px, 25px);
+		height: 45px;
+		top: 0px;
+		right: 0px;
+		cursor: pointer;
+		width: 50px;
+		[dir=rtl] & {
+			right: auto;
+			left: 0;
+			@include border-radius-separate(25px, 0px, 25px, 0px);
+		}
+	}
+}
+
+
+.custom-file{
+	min-height: 45px;
+}
+.custom-file-input{
+	min-height: 45px;
+	&:focus {
+		@include border-color-opacity($theme-primary-color, 0.5);
+		box-shadow: none !important;
+		outline: 0 none;
+	}
+}
+.custom-file-label {
+    height: 45px;
+    padding: 10px 10px;
+    line-height: 1.5;
+    color: $theme-grey-color !important;
+    background-color: $theme-white-color;
+	border: 1px solid $theme-light-grey;
+	@include border-radius(25px);
+	
+	&::after {
+		height: 45px;
+		padding: 10px 10px;
+		line-height: 1.5;
+		color: $theme-white-color;
+		content: "Browse";
+		background-color: $theme-primary-color;
+		border-left: 1px solid $theme-primary-color;
+		border-radius: 0 25px 25px 0;
+	}
+
+}
+/** Overide Ranger Colors **/
+.asRange {
+    width: 100%;
+    background-color: $theme-light-grey;
+
+    .asRange-selected {
+        background-color: $theme-primary-color;
+    }
+
+    .asRange-pointer {
+        &::before {
+            background: $theme-secondary-color;
+        }
+
+        .asRange-tip {
+            font-family: $body-font;
+        }
+    }
+}
+
+
+.list-label {
+    margin-left: 7px;
+
+}
+
+
+/** Custom Date Dropper **/
+div.datedropper.custom-datedropper {
+    @include border-radius(3px);
+    width: 200px;
+}
+
+div.datedropper.custom-datedropper .picker {
+    @include border-radius(3px);
+    @include box-shadow(0px, 0px, 64px, rgba(0, 0, 0, 0.14));
+}
+
+div.datedropper.custom-datedropper .pick-l {
+    @include border-radius-separate(0px, 0px, 3px, 3px);
+}
+
+div.datedropper.custom-datedropper:before,
+div.datedropper.custom-datedropper .pick-submit,
+div.datedropper.custom-datedropper .pick-lg-b .pick-sl:before,
+div.datedropper.custom-datedropper .pick-m,
+div.datedropper.custom-datedropper .pick-lg-h {
+    background-color: $theme-secondary-color;
+}
+
+div.datedropper.custom-datedropper .pick-y.pick-jump,
+div.datedropper.custom-datedropper .pick li span,
+div.datedropper.custom-datedropper .pick-lg-b .pick-wke,
+div.datedropper.custom-datedropper .pick-btn {
+    color: $theme-secondary-color;
+}
+
+div.datedropper.custom-datedropper .picker,
+div.datedropper.custom-datedropper .pick-l {
+    background-color: $theme-white-color;
+}
+
+div.datedropper.custom-datedropper .picker,
+div.datedropper.custom-datedropper .pick-arw,
+div.datedropper.custom-datedropper .pick-l {
+    color: $body-font-color;
+}
+
+div.datedropper.custom-datedropper .pick-m,
+div.datedropper.custom-datedropper .pick-m .pick-arw,
+div.datedropper.custom-datedropper .pick-lg-h,
+div.datedropper.custom-datedropper .pick-lg-b .pick-sl,
+div.datedropper.custom-datedropper .pick-submit {
+    color: $theme-white-color;
+}
+
+div.datedropper.custom-datedropper.picker-tiny:before,
+div.datedropper.custom-datedropper.picker-tiny .pick-m {
+    background-color: $theme-white-color;
+}
+
+div.datedropper.custom-datedropper.picker-tiny .pick-m,
+div.datedropper.custom-datedropper.picker-tiny .pick-m .pick-arw {
+    color: $body-font-color;
+}
+
+div.datedropper.custom-datedropper.picker-lkd .pick-submit {
+    background-color: $theme-white-color;
+    color: $body-font-color;
+}
+
+
+/* Custom Checkbox and Radio Buttons */
+
+.animated-checkbox {
+	input[type="checkbox"] {
+		display: none;
+
+		+ .label-text {
+			cursor: pointer !important;
+			user-select: none;
+            font-weight: 400;
+			&:before {
+				content: "\e8cb";
+				font-family: "feather";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				font-size: 18px;
+				-webkit-font-smoothing: antialiased;
+				width: 1em;
+				display: inline-block;
+				margin-right: 2px;
+				vertical-align: -2px;
+			}
+		}
+
+		&:checked + .label-text:before {
+			content: "\e840";
+			color: $theme-primary-color;
+			animation: tick 180ms ease-in;
+		}
+
+		&:disabled + .label-text {
+			cursor: not-allowed !important;
+
+			&:before {
+				content: "\e8cb";
+				color: $theme-grey-color;
+			}
+		}
+	}
+}
+
+.animated-radio-button {
+	input[type="radio"] {
+		display: none;
+
+		+ .label-text {
+			cursor: pointer !important;
+			user-select: none;
+            font-weight: 400;
+			&:before {
+				content: "\e84a";
+				font-family: "feather";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				font-size: 18px;
+				-webkit-font-smoothing: antialiased;
+				width: 1em;
+				display: inline-block;
+				margin-right: 2px;
+				vertical-align: -2px;
+			}
+		}
+
+		&:checked + .label-text:before {
+			content: "\e83e";
+			color: $theme-primary-color;
+			animation: tick 180ms ease-in;
+		}
+
+		&:disabled + .label-text {
+			cursor: not-allowed !important;
+
+			&:before {
+				content: "\e84a";
+				color: $theme-grey-color;
+			}
+		}
+	}
+}
+
+// Bounce the checked checkbox and radio button
+@keyframes tick {
+	0% {
+		transform: scale(0);
+	}
+
+	90% {
+		transform: scale(1.4);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Toggle */
+
+.toggle {
+	&.lg {
+		input[type="checkbox"] + .button-indecator:before {
+			font-size: 30px;
+		}
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		+ .button-indecator {
+			cursor: pointer;
+			display: block;
+			user-select: none;
+
+			&:before {
+				content: "\e8d8";
+				font-family: "feather";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				font-size: 25px;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: -2px;
+			}
+		}
+
+		&:checked + .button-indecator:before {
+			content: "\e8d9";
+			color: $theme-secondary-color;
+			animation: toggleBtn 0.3s ease-in-out;
+		}
+
+		&:disabled + .button-indecator {
+			cursor: not-allowed !important;
+
+			&:before {
+				color: $theme-grey-color
+			}
+		}
+	}
+}
+
+.toggle-flip {
+	input[type="checkbox"] {
+		display: none;
+
+		+ .flip-indecator {
+			position: relative;
+			width: 60px;
+			height: 30px;
+			display: block;
+			cursor: pointer;
+			user-select: none;
+			perspective: 90px;
+
+			&:before, &:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: inline-block;
+				width: 100%;
+				line-height: 30px;
+				backface-visibility: hidden;
+				text-align: center;
+				border-radius: 3px;
+				transition: all 0.5s ease;
+			}
+
+			&:before {
+				content: attr(data-toggle-off);
+				background-color: $theme-light-grey;
+			}
+
+			&:after {
+				content: attr(data-toggle-on);
+				background-color: $theme-primary-color;
+				color: $theme-white-color;
+				transform: rotateY(-180deg);
+			}
+		}
+
+		&:checked {
+			+ .flip-indecator {
+				&:before {
+					transform: rotateY(180deg);
+				}
+
+				&:after {
+					transform: rotateY(0deg);
+				}
+			}
+		}
+
+		&:disabled + .flip-indecator {
+			cursor: not-allowed !important;
+			color: $theme-grey-color;
+		}
+	}
+}
+
+// Slide the toggle button
+@keyframes toggleBtn {
+	0% {
+		opacity: 0;
+		transform: translateX(-1px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.datepicker {
+    @include border-radius(3px);
+    &.dropdown-menu {
+        @include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+        color: $body-font-color !important;
+        font-size: 14px !important;
+    }
+}
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active {
+    color: $theme-white-color;
+    background-color: $theme-primary-color;
+    border-color: darken($theme-primary-color, 5);
+}
+.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus, .datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus, .datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover, .datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus, .datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus, .datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover {
+    color: $theme-white-color;
+    background-color: $theme-secondary-color;
+    border-color: darken($theme-secondary-color, 5);
+}
+
+// Dropzone
+.dropzone{
+	border: 2px dashed $theme-primary-color;
+	padding: 80px 0px;
+	text-align: center;
+	min-height: 150px;
+	cursor: pointer;
+	@include border-radius(3px);
+}
+// Summernote
+.note-editor.note-frame {
+    border: 1px solid $theme-grey-color !important;
+}

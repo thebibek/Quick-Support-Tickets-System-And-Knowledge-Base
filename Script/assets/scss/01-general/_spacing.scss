@@ -1,0 +1,52 @@
+//Padding and Margin adjustment
+$spaceamounts: (
+  0,
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  55,
+  60,
+  65,
+  70,
+  75,
+  80,
+  85,
+  90,
+  95,
+  100
+);
+$sides: (
+  "": "all",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+@each $space in $spaceamounts {
+  @each $prefix, $value in $sides {
+    $property: if($prefix == '', '', -#{$value});
+
+    .m#{$prefix}#{$space} {
+      margin#{$property}: #{$space}px;
+    }
+
+    .p#{$prefix}#{$space} {
+      padding#{$property}: #{$space}px;
+    }
+  }
+}
+//Letter Spacing
+.ls1 {
+  letter-spacing: 1px;
+}
+
+.ls2 {
+  letter-spacing: 2px;
+}

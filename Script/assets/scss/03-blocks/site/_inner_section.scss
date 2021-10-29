@@ -1,0 +1,49 @@
+.inner-banner{
+    padding: 50px 0px;
+    position: relative;
+    background: url('../images/banner.jpg')center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    h4{
+        color: $theme-white-color;
+    }
+}
+.inner-section{
+    padding: 80px 0px;
+    min-height: 700px;
+    background: $theme-light-bg;
+}
+
+.dash-tile{
+    position: relative;
+    background-color: $theme-grey-color;
+    @include border-radius(8px);
+    padding: 20px 80px 20px 20px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    h2{
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $theme-white-color;
+        line-height: 20px;
+      }
+    h4{
+        font-size: 50px;
+        line-height: 50px;
+        color: $theme-white-color;
+    }
+    &.all-tickets{
+        background-image: url('../images/all-ticket.png');
+    }
+    &.new-tickets{
+        background-image: url('../images/new-ticket.png');
+    }
+    &.proggress-tickets{
+        background-image: url('../images/progress-ticket.png');
+    }
+    &.closed-tickets{
+        background-image: url('../images/closed-ticket.png');
+    }
+}

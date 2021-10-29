@@ -1,0 +1,83 @@
+//search
+.search-holder {
+    position: relative;
+    .search-form {
+      .input-group {
+        .btn {
+          border-radius: 0 !important;
+          color: $theme-grey-color;
+          height: 55px;
+          &:focus {
+            box-shadow: none;
+          }
+          &:hover {
+            background: $theme-white-color;
+            border: 1px solid $theme-white-color;
+          }
+          i {
+            line-height: 40px;
+          }
+        }
+        .form-control {
+          @include placeholder {
+            color: $theme-grey-color !important;
+            font-size: 16px !important;
+          }
+          color: $body-font-color;
+          border: 1px solid $theme-white-color;
+          border-radius: 0 !important;
+          height: 55px;
+          &:focus {
+            box-shadow: none;
+            border: 1px solid $theme-white-color;
+          }
+        }
+      }
+      
+    }
+  
+    .sub-search-form {
+      .input-group {
+        .btn {
+          color: $theme-grey-color;
+          background-color: $theme-white-color;
+          border: 1px solid $theme-light-grey;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+          border-left: 0px;
+          &:focus {
+            box-shadow: none;
+          }
+  
+        }
+        .form-control {
+          @include placeholder {
+            color: $theme-grey-color !important;
+          }
+          color: $body-font-color;
+          border: 1px solid $theme-light-grey;
+          &:focus {
+            box-shadow: none;
+            border-right: 0px;
+          }
+        }
+      }
+      
+    }
+    .search-suggestions {
+      position: absolute;
+      background: $theme-white-color;
+      -webkit-box-shadow: 2px 0px 5px -1px rgba(0, 0, 0, 0.26);
+      -moz-box-shadow: 2px 0px 5px -1px rgba(0, 0, 0, 0.26);
+      box-shadow: 2px 0px 5px -1px rgba(0, 0, 0, 0.26);
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      z-index: 100;
+      display: none;
+    }
+  }

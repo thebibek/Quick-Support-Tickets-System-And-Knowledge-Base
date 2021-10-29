@@ -1,0 +1,39 @@
+.profile-image-holder {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .profile-image {
+        position: relative;
+        width: 120px;
+        height: 120px;
+
+        img {
+            width: 120px;
+            height: 120px;
+            @include border-radius(50%);
+        }
+
+        .image-edit-icon {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            background: $theme-secondary-color;
+            color: $theme-white-color;
+            bottom: 20px;
+            right: -10px;
+            @include border-radius(50%);
+            @include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+            cursor: pointer;
+        }
+    }
+}

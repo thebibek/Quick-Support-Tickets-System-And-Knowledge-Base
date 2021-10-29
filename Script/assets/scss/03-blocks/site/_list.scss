@@ -1,0 +1,105 @@
+//Tickets List
+.tickets-list {
+    position: relative;
+    border-bottom: 1px solid $theme-light-grey;
+    padding: 10px 60px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &.no-action{
+        padding: 10px 0px 10px 0px !important;
+    }
+    .ticket-info{
+        .media {
+            .image-holder {
+                margin-right: 15px;
+                img {
+                    width: 75px;
+                    height: 75px;
+                    @include border-radius(50%);
+                }
+    
+            }
+            .media-body {
+                h6 {
+                    font-size: 15px;
+                }
+    
+                p {
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
+    }
+    .assigned-to{
+        margin-left: auto;
+        .media {
+            .image-holder {
+                margin-right: 15px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    @include border-radius(50%);
+                }
+    
+            }
+            .media-body {
+                h6 {
+                    font-size: 14px;
+                }
+    
+                p {
+                    margin-bottom: 0px !important;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    
+
+
+}
+
+.action-dropdown {
+    position: absolute;
+    right: 0px;
+    top: 35%;
+
+    .dropdown-toggle::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 40px !important;
+        margin-top: 10px;
+        font-size: 20px;
+        vertical-align: 0px;
+        content: "\e94a" !important;
+        font-family: 'LineIcons';
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+        border-left: 0 !important;
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .dropdown-menu {
+        border: 1px solid $theme-light-grey;
+        @include border-radius(8px);
+
+    }
+
+    .dropdown-item {
+        cursor: pointer;
+        color: $body-font-color;
+
+        &:focus {
+            background: $theme-light-grey !important;
+        }
+    }
+}
